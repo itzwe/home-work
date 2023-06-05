@@ -1,0 +1,36 @@
+/* 과제*/
+.mission{   
+  width: 250px;
+  height: 259px;
+  background-color: #cccccc;
+  border-radius: 10px;
+  font-size: 13px;
+  margin: 0;
+  padding: 5px 20px; 
+
+}
+span{
+  display: block;
+}
+.title{
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+.img1{
+  float: left;
+  margin-right: 20px;
+}
+.subT{
+  color: #296798;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.box1{
+  margin-bottom: 20px;
+}
+.text{
+  font-weight: 545;
+}
+.img2{
+  float: right;
+}

@@ -1,0 +1,19 @@
+/*과제*/
+div{
+  width: 250px;
+  height: 37px;
+  background-color: #cccccc;
+  border: 1px solid none;  
+  border-radius: 30px;
+  margin-bottom: 10px;
+  background-image: url(../images/validation_icon_2.png);
+  background-repeat: no-repeat;
+  background-position: 7%;
+  text-align: center;
+  line-height: 37px;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+}
