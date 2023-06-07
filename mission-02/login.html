@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./login.css" />
+</head>
+<body>
+  <div class="login-container">
+    <h3>로그인</h3>  
+    <!-- 로그인 창 및 아이디 생성, 찾기 추가할 div-->
+    <div class="login-form">
+      <!-- 사용자로부터 아이디 및 비밀번호 입력받아 로그인하는 태그 -->
+      <form action="/" method="post">
+        <fieldset>
+          <legend>입력 폼</legend>
+          <!-- 아이디 및 비밀번호 입력 태그 -->
+          <div class="login-group">
+            <label for="loginid">아이디</label>
+            <input type="text" id="loginid" name="loginid" required placeholder="아이디를 입력하세요."/>
+            <label for="loginpw">비밀번호</label>
+            <input type="password" id="loginpw" name="loginpw" required placeholder="8자리이상"/>
+          </div>
+          <!-- 버튼 태그 기본속성 submit -->
+          <button>로그인</button>
+          
+        </fieldset>
+      </form>
+      <!-- 로그인 버튼 밑 회색 선 -->
+      <div class="line"></div>
+      <!-- 유저 회원가입 및 아이디, 비밀번호 찾기 링크연결 태그 -->
+      <div class="user-tab">
+        <div class="create-account">
+          <i class="fa-solid fa-chevron-right" style="color: #ed552f;"></i>
+          <a href="#">회원가입</a>
+        </div>
+        <div class="find-user">
+          <i class="fa-solid fa-chevron-right" style="color: #ed552f;"></i>
+          <a href="#">아이디 비밀번호 찾기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://kit.fontawesome.com/4675147455.js" crossorigin="anonymous"></script>  <!-- 아이콘 불러오기-->
+</body>
+</html>

@@ -1,0 +1,96 @@
+@import url(./a11y.css);
+.login-container{
+  width: 270px;
+  height: 165px;
+  background: linear-gradient(to left,#e8852e, #ed522f );
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px #AAAAAA;
+}
+h3{
+  padding-top: 12px;
+  padding-left: 12px;
+  color: yellow;
+  
+}
+
+.login-form{
+  position: relative; /*로그인 버튼 및 line 클래스에서 position을 지정할 수 있도록 부모 요소인 login-form 클래스에 relative 지정 */
+  width: 250px;
+  height: 106px;
+  background-color: white;
+  border-radius: 10px;
+  margin-left: 10px;
+  bottom: 10px;
+ 
+}
+fieldset{
+  border: none; 
+  
+}
+.login-group{
+  width: 170px;
+  height: 62px;
+  font-size: 10px;
+  margin-top: 5px;
+  
+}
+label{
+  float: left;  /*아이디 , 비밀번호 label float 이용해 왼쪽 배치*/
+  /* padding-left: 0px; */
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 25px;
+  margin-top: 2px;
+  margin-left: 3px;
+}
+#loginid, #loginpw{
+  width: 90px;
+  height: 22px;
+  float: right;  /*아이디. 비밀번호 입력 태그 오른쪽 배치*/
+  border-radius: 4px;
+  border: 1px solid gray;
+  margin-top: 2px;
+  margin-left: 0px;
+}
+
+button{
+  position: absolute; /*부모 요소중 relative 속성값을 받은 클래스를 기준으로 버튼위치 조정*/
+  background-color: #ed522f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 11px;
+  width: 50px;
+  height: 53px;
+  top: 12px;
+  right: 7px;   /* top, right를 이용해 버튼 우측배치 */  
+}
+.line{ 
+  position: absolute; /* 마찬가지로 relative 받은 클래스를 기준으로 위치조정*/
+  width: 225px;
+  height: auto;
+  top: 74px;
+  left: 10px;
+  border: 1px solid rgba(128,128,128, .2); /* .2 로 회색선 투명도 주기*/
+} 
+.user-tab{
+  font-size: 13px;
+  font-weight: 550;
+  margin-top: 0px;
+}
+
+.create-account{
+  float: left;  /*회원가입 링크 왼쪽 배치*/
+  margin-left: 15px
+}
+
+.find-user{
+  float: right;  /* 아이디, 비밀번호 찾기 오른쪽 배치*/
+  margin-right: 15px; 
+}
+
+/* a태그 밑줄 및 글 색깔 변경*/
+a{
+  text-decoration: none;
+  color: black;
+}
