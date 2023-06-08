@@ -1,4 +1,8 @@
 @import url(./a11y.css);
+ul{
+  list-style: none;
+  padding: 0;
+}
 .login-container{
   width: 270px;
   height: 165px;
@@ -14,7 +18,7 @@ h3{
 }
 
 .login-form{
-  position: relative; /*로그인 버튼 및 line 클래스에서 position을 지정할 수 있도록 부모 요소인 login-form 클래스에 relative 지정 */
+  position: relative; /*로그인 버튼 및 line 클래스에서 absolute를 지정할 수 있도록 부모 요소인 login-form 클래스에 relative 지정 */
   width: 250px;
   height: 106px;
   background-color: white;
@@ -25,12 +29,11 @@ h3{
 }
 fieldset{
   border: none; 
-  
 }
 .login-group{
   width: 170px;
   height: 62px;
-  font-size: 10px;
+  font-size: 0.75rem;
   margin-top: 5px;
   
 }
@@ -39,11 +42,17 @@ label{
   /* padding-left: 0px; */
   font-size: 14px;
   font-weight: 600;
-  line-height: 25px;
-  margin-top: 2px;
+  line-height: 27px;
   margin-left: 3px;
 }
-#loginid, #loginpw{
+
+/* a태그 밑줄 및 글 색깔 변경*/
+a{
+  text-decoration: none;
+  color: black;
+}
+
+#login-id, #login-pw{
   width: 90px;
   height: 22px;
   float: right;  /*아이디. 비밀번호 입력 태그 오른쪽 배치*/
@@ -59,7 +68,7 @@ button{
   color: white;
   border: none;
   border-radius: 5px;
-  font-size: 11px;
+  font-size: 0.75rem;
   width: 50px;
   height: 53px;
   top: 12px;
@@ -81,16 +90,11 @@ button{
 
 .create-account{
   float: left;  /*회원가입 링크 왼쪽 배치*/
+  
   margin-left: 15px
 }
 
 .find-user{
   float: right;  /* 아이디, 비밀번호 찾기 오른쪽 배치*/
   margin-right: 15px; 
-}
-
-/* a태그 밑줄 및 글 색깔 변경*/
-a{
-  text-decoration: none;
-  color: black;
 }
