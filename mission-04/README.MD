@@ -4,7 +4,7 @@
 
 <img src="../images/mission04-html.png" height="450">
 
-전체 태그를 담을 클래스인 container 안에 header를 나타낼 headere 클래스와 그 밑에 grid 로 요소를 배치할 grid-container 클래스를 선언함. grid-container 안에는 img 를 나타낼 figure 태그와 그 밑에 제목을 나타낼 span 태그, 그리고 이미지 옆 제목, 날짜를 나타낼 sub-title 클래스와 제목에 맞는 내용을 나타내는 p 태그를 마크업 하였다.
+전체 태그를 담을 클래스인 container 안에 header를 나타낼 headere 클래스와 그 밑에 grid 로 요소를 배치할 grid-container 클래스를 선언함. grid-container 안에는 img 를 나타낼 figure 태그와 figure 태그 자식요소로 figcaption 태그를 사용해 이미지를 설명하는 텍스트를 배치했다. 그리고 밖으로 빠져나와서 이미지 옆 제목, 날짜를 나타낼 sub-title 클래스와 제목에 맞는 내용을 나타내는 p 태그를 마크업 하였다.
 
 ## css 코드
 
