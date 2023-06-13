@@ -25,7 +25,8 @@ h2 span{
 }
 .span-box{
   width: 150px;
-  height: 11px;
+  height: 25px;
+  box-sizing: border-box; /* 박스 사이징을 안쓰면 상자 높이가 늘어남*/
   overflow: hidden;
   margin: 0 auto;
   background-color: white;
@@ -34,11 +35,11 @@ h2 span{
   padding-left: 20px;
   padding-bottom: 15px;
   text-align: left;
-  transition: height 1s, padding-top 1s 0.5s;
+  transition: height 0.4s, padding-top 1s 0.5s;
 }
 
 
 .span-box:hover{
-  height: 130px;  /* block : none , height : auto 모두 x */
-  padding-top: 15px;
+  height: 150px;  /* block : none , height : auto 모두 x */
+  padding: 10px 0 8px 20px;
 }
