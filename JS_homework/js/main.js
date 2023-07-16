@@ -16,12 +16,11 @@ const user = {
 const loginBtn = document.querySelector('.btn-login');
 const inputId = document.querySelector('.user-email-input');
 const inputPw = document.querySelector('.user-password-input');
-const loginValidation = emailReg(inputId.value) && pwReg(inputPw.value);
 
 function validation(type, reg){  // id, pw 유효성 검사 함수
-  if(reg(type.value)){
-    type.classList.remove('is--invalid');
-  }else if(type.value === ''){
+  if(reg(type.value)){ //정규식 조건 일치 시 오류 메시지 제거
+    type.classList.remove('is--invalid');  
+  }else if(type.value === ''){  // 모든 입력 값 제거 시 오류 메시지 제거
     type.classList.remove('is--invalid');
   }else{
     type.classList.add('is--invalid');
@@ -39,12 +38,7 @@ inputPw.addEventListener('input', function(){
  })
 
 
-//  const user = {
-//   id:'asd@naver.com',
-//   pw:'spdlqj123!@'
-// }
-
- loginBtn.addEventListener('click', function(event){ 
+ loginBtn.addEventListener('click', function(event){  //로그인 클릭 이벤트
   event.preventDefault();  //클릭시 페이지 이동 막기
   if((emailReg(inputId.value) && pwReg(inputPw.value))&& user.id === inputId.value && user.pw === inputPw.value){ //유저 아이디와, 비밀번호가 둘 다 정규식 조건에 부합하는지 확인. 
     window.location.href = 'welcome.html'; //조건에 맞다면 해당 페이지로 이동
