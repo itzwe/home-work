@@ -38,9 +38,15 @@ inputPw.addEventListener('input', function(){
     validation(inputPw, pwReg);
  })
 
+
+//  const user = {
+//   id:'asd@naver.com',
+//   pw:'spdlqj123!@'
+// }
+
  loginBtn.addEventListener('click', function(event){ 
   event.preventDefault();  //클릭시 페이지 이동 막기
-  if(emailReg(inputId.value) && pwReg(inputPw.value)){ //유저 아이디와, 비밀번호가 둘 다 정규식 조건에 부합하는지 확인. 
+  if((emailReg(inputId.value) && pwReg(inputPw.value))&& user.id === inputId.value && user.pw === inputPw.value){ //유저 아이디와, 비밀번호가 둘 다 정규식 조건에 부합하는지 확인. 
     window.location.href = 'welcome.html'; //조건에 맞다면 해당 페이지로 이동
   }
   else{
