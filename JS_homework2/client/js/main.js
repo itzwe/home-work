@@ -9,32 +9,40 @@
 
 */
 
-const body = document.body;
-const nav = document.querySelector('.nav');
-const list = document.querySelectorAll('.nav li');
-const visualImage = document.querySelector('.visual img');
-const h1 = document.querySelector('.nickName');
 
+const nav = getNode('.nav');
+const list = getNodes('.nav li');
+const visualImage = getNode('.visual img');
+const h1 = getNode('.nickName');
+
+function setBgColor(node,index){ //배경색 지정 함수
+  if(typeof node === 'string'){
+    node = getNode(node);
+  }
+  color = data[index-1].color[0];
+  return node.style.background =`linear-gradient(to bottom, ${color} ,#000)`
+}
+function setImage(){
+
+}
+function setNameText(){
+
+}
 function handler(e){
 
   const target = e.target;
-  const li = target.closest('li');
+  const li = target.closest('li'); //ul img 누를 시 li 선택
 
-  if(!li) return ;
-
-  console.log(li);
-  list.forEach((item)=>{
+  if(!li) return ; // li에 마우스가 올라가 있지 않으면 어느 요소도 click x
+  
+  list.forEach((item)=>{  // 모든 li 클래스 이미지 제거
     item.classList.remove('is-active');
   })
-
-  li.classList.add('is-active');
-
-  const indexNumber = li.dataset.index;
-  console.log(indexNumber);
-  const dataColor = data[indexNumber-1].color[0];
-  console.log(dataColor);
-  body.style.background = `linear-gradient(to bottom, ${dataColor}, #000)`
-  console.log(target.src);
+  li.classList.add('is-active'); // 마우스 click 된 li 에 클래스 추가
+  
+  const indexNumber = li.dataset.index; //data-index 값
+  
+  setBgColor('body',indexNumber);
   visualImage.setAttribute('src', `./assets/${data[indexNumber-1].name.toLowerCase()}.jpeg`)
   h1.textContent = data[indexNumber-1].name;
 }
