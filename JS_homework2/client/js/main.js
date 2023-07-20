@@ -22,11 +22,16 @@ function setBgColor(node,index){ //배경색 지정 함수
   color = data[index-1].color[0];
   return node.style.background =`linear-gradient(to bottom, ${color} ,#000)`
 }
-function setImage(){
 
+function setImage(node,prop,index){  //이미지 변경 함수
+
+  attr(node,prop, `./assets/${data[index-1].name.toLowerCase()}.jpeg` )
 }
-function setNameText(){
 
+function setNameText(node, index ){ // 텍스트 변경 함수
+  // h1.textContent = data[indexNumber-1].name;
+  node.textContent = data[index-1].name;
+  return node.textContent 
 }
 function handler(e){
 
@@ -41,10 +46,13 @@ function handler(e){
   li.classList.add('is-active'); // 마우스 click 된 li 에 클래스 추가
   
   const indexNumber = li.dataset.index; //data-index 값
-  
   setBgColor('body',indexNumber);
-  visualImage.setAttribute('src', `./assets/${data[indexNumber-1].name.toLowerCase()}.jpeg`)
-  h1.textContent = data[indexNumber-1].name;
+  
+  // visualImage.setAttribute('src', `./assets/${data[indexNumber-1].name.toLowerCase()}.jpeg`) 이미지 변경 기능구현
+  setImage(visualImage, 'src', indexNumber);
+
+  // h1.textContent = data[indexNumber-1].name;
+  setNameText(h1,indexNumber);
 }
 
 
