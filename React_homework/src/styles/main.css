@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.toggleBG {
+  margin: 50px 0px 0px 150px;
+  width: 70px;
+  height: 30px;
+  border: 3px solid blue;
+  border-radius: 15px;
+}
+
+.toggleFG {
+  background: #FFFFFF;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  cursor: pointer;
+  transition: left 1s;
+}
+
